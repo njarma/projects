@@ -1,0 +1,24 @@
+<h1>Buscando: <small> {{ termino }}</small></h1>
+<hr>
+
+.<div class="card-columns">
+    <app-heroe-tarjeta [heroe] = "foo" [index] = "foo.idx" *ngFor="let foo of heroes; let i = index"></app-heroe-tarjeta>
+    <!--
+    <div class="card animated fadeIn fast" *ngFor="let heroe of heroes; let i = index">
+        <img class="card-img-top" [src]="heroe.img" [alt]="heroe.nombre">
+        <div class="card-body">
+          <h5 class="card-title">{{ heroe.nombre }} {{ i }}</h5>
+          <p class="card-text">{{ heroe.bio }}</p>
+          <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
+          
+          <button (click)="verHeroe(i)" class="btn btn-outline-primary btn-block">
+              Ver más.. {{ i }}
+          </button>
+          
+           --Mediante Routerlink 
+              <a [routerLink]="['/heroe', i]" class="btn btn-outline-primary"> Ver más link..</a> 
+          
+        </div>
+      </div>
+      -->
+</div>
