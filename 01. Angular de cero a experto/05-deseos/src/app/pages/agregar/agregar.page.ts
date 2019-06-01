@@ -33,4 +33,30 @@ export class AgregarPage implements OnInit {
     }
   }
 
+  cambioCheck( item: ListaItem ) {
+
+    const pendientes = this.lista.items
+                            .filter(data => !data.completado)
+                            .length;
+    // Para imprimir el resultado en forma de objeto
+    // console.log({pendientes});
+
+    if (pendientes === 0) {
+      this.lista.TerminadaEn = new Date();
+      this.lista.terminada = true;
+    } else {
+      this.lista.TerminadaEn = null;
+      this.lista.terminada = false;
+    }
+
+    this.deseoService.guardarStorage();
+
+    console.log( this.deseoService.listas );
+  }
+
+  borrarItem( i: number) {
+    this.lista.items.splice( i, 1 );
+    this.deseoService.guardarStorage();
+  }
+
 }

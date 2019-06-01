@@ -1,0 +1,9 @@
+Tareas de refactorización:
+1) Modificar el estilo por defecto, para que el fondo sea color="dark".
+2) Evitar copiar y pegar el alert. Generar uno reutilizable desde el servicio
+
+
+Videos importantes:
+127. Módulo de componentes y listas component (explica como usar módulos)
+130. Pipes impuros
+131. Editar el título de la lista (explica para que y cómo usar el viewChild)
