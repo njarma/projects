@@ -23,7 +23,7 @@ export class NgStyleComponent implements OnInit {
   <p [style.fontSize]="'10px'">
   <p [ngStyle]="{ 'font-size': '10px', 'color': 'red' }"> */
 
-  tamanio = 100;
+  tamanio = 15;
 
   constructor() { }
 
