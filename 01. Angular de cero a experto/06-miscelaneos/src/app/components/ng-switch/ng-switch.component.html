@@ -1,16 +1,19 @@
-
-<div [ngSwitch]="alerta">
-  <div *ngSwitchCase="'success'">success</div>
-  <div *ngSwitchCase="'info'">info</div>
-  <div *ngSwitchCase="'warning'">warning</div>
-  <div *ngSwitchDefault>danger</div>
-</div>
-
 <button type="button" 
         class="btn btn-primary"
         (click)="alerta = random_item(colores)">cambiar</button>
 <br>
 <br>
+
+<div [ngSwitch]="alerta">
+  <div *ngSwitchCase="'primary'">primary</div>
+  <div *ngSwitchCase="'secondary'">secondary</div>
+  <div *ngSwitchCase="'success'">success</div>
+  <div *ngSwitchDefault>danger</div>
+  <div *ngSwitchCase="'info'">info</div>
+  <div *ngSwitchCase="'light'">wlight</div>
+  <div *ngSwitchCase="'dark'">dark</div>
+</div>
+
 <div [ngSwitch]="alerta">
   <div class="alert alert-primary" *ngSwitchCase="'primary'" role="alert">
     This is a primary alert—check it out!

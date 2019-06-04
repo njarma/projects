@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { randomBytes } from 'crypto';
 
 @Component({
   selector: 'app-ng-switch',
