@@ -1,0 +1,11 @@
+
+Videos importantes:
+
+137. ngStyle y su uso con directivas de atributos.
+140. Usando procesos asíncronos con indicadores de usuario
+141. Directivas personalizadas
+142. ngSwitch - Múltiples opciones con una sola decisión
+143. Rutas y Rutas Hijas
+144. Rutas Hijas
+145. Separar las rutas hijas a un archivo especifico
+146. Obteniendo parámetros del padre, desde las rutas hijas
