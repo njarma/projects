@@ -2,3 +2,7 @@
 
 Videos importantes:
 154. Actualización de Auth0
+155. Comenzando con Auth0 - Componentes y servicios
+157. Servicio de bloqueo - CanActivate - AuthGuard
+158. Obteniendo el perfil del usuario que inició sesión
+159. Personalizando el login y otras opciones
