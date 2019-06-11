@@ -7,6 +7,7 @@ import { ApiService } from 'src/app/core/http/api.service';
 // import * as resources from 'src/app/configs/apiResources.json';
 import { resources } from 'src/app/configs/api-resources.config';
 import { mergeMap } from 'rxjs/internal/operators/mergeMap';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -28,13 +29,14 @@ export class FacturaService extends ApiService<Factura> {
     return this.guardar( body );
   }
 
-  getFactura(facId: number): any {
-    return this.http.get(environment.apiURL + '/Factura/' + facId).toPromise();
+  getFactura(facId: number): Observable<any> {
+      return this.buscarPorId( facId );
   }
 
-  eliminarFactura(facId: number) {
-      return this.eliminar( facId ).pipe(
-          mergeMap( data => this.buscarTodos())
-      );
+  eliminarFactura(facId: number): Observable<Factura[]> {
+      return this.eliminar( facId )
+                  .pipe(
+                    mergeMap( data => this.buscarTodos())
+                  );
   }
 }

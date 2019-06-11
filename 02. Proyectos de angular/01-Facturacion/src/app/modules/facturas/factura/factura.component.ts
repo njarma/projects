@@ -8,6 +8,7 @@ import { Cliente } from 'src/app/shared/models/cliente.model';
 import { ToastrService } from 'ngx-toastr';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-factura',
@@ -22,7 +23,7 @@ export class FacturaComponent implements OnInit {
   esValido: boolean = true;
 
 
-  constructor(private service: FacturaService,
+  constructor(public service: FacturaService,
               private popUp: MatDialog,
               private clienteService: ClienteService,
               private toastr: ToastrService,
@@ -35,14 +36,13 @@ export class FacturaComponent implements OnInit {
       this.resetForm();
     }
     else {
-      this.service.getFactura(parseInt(facId)).then(res => {
-        this.service.formData = res.factura;
-        this.service.facturaDetalle = res.facturaDetalle;
-      });
+        this.service.getFactura(parseInt(facId))
+                    .pipe(take(1))
+                    .subscribe(res => {
+          this.service.formData = res.factura;
+          this.service.facturaDetalle = res.facturaDetalle;
+        });
     }
-    /* CODIGO DE MAXI 
-    this.clienteService.getListaClientes().then(res => this.clienteLista = res as Cliente[]);*/
-    // this.clienteService.buscarTodos().subscribe( data => this.clienteLista = data);
     this.clienteLista$ = this.clienteService.buscarTodos();
   }
 
