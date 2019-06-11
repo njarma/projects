@@ -1,0 +1,42 @@
+<h4 class="display-4">Seleccionar Productos</h4>
+<hr>
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+  <input type="hidden" name="fdeId" #fdeId="ngModel" [(ngModel)]="formData.fdeId">
+  <input type="hidden" name="facId" #facId="ngModel" [(ngModel)]="formData.facId">
+  <input type="hidden" name="proNombre" #proPrecio="ngModel" [(ngModel)]="formData.proNombre">
+  <div class="form-group">
+    <label>Producto: </label>
+    <select name="proId" #proId="ngModel" [(ngModel)]="formData.proId" class="form-control" (change)="obtenerPrecio($event.target)" [class.is-invalid] = "!esValido && formData.proId === 0">
+      <option value="0">Seleccionar...</option>
+      <option *ngFor="let producto of (productoLista$ | async) as productoLista" value="{{producto.proId}}">{{producto.proNombre}}</option>
+    </select>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>Precio: </label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">$</div>
+        </div>
+        <input name="proPrecio" #proPrecio="ngModel" [(ngModel)]="formData.proPrecio" class="form-control" readonly>
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label>Cantidad: </label>
+      <input name="fdeCantidad" #fdeCantidad="ngModel" [(ngModel)]="formData.fdeCantidad" class="form-control" (keyup)="calcularTotal()" [class.is-invalid] = "!esValido && formData.fdeCantidad === 0">
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Total: </label>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text">$</div>
+      </div>
+      <input name="Total" #Total="ngModel" [(ngModel)]="formData.Total" class="form-control" readonly>
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Agregar</button>
+    <button type="button" class="btn btn-outline-dark ml-1" [mat-dialog-close]><i class="fa fa-close"></i> Cerrar</button>
+  </div>
+</form>

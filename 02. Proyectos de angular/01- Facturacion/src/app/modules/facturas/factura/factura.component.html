@@ -1,0 +1,76 @@
+<form #form="ngForm" autocomplete="off" *ngIf="service.formData" (submit)= "onSubmit(form)">
+  <input type="hidden" name="facId" #facId="ngModel" [(ngModel)]="service.formData.facId">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Factura Nro.: </label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">#</div>
+          </div>
+          <input name="facNro" #facNro="ngModel" [(ngModel)]="service.formData.facNro" class="form-control" readonly>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Cliente: </label>
+        <select name="cliId" #cliId="ngModel" [(ngModel)]="service.formData.cliId" class="form-control" [class.is-invalid]="!esValido && service.formData.cliId === 0">
+          <option value="0">Seleccionar...</option>
+          <option *ngFor="let cliente of (clienteLista$ | async) as clienteLista" value="{{cliente.cliId}}">{{cliente.cliNombre}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+          <label>Forma Pago: </label>
+          <select name="fpaNombre" #fpaNombre="ngModel" [(ngModel)]="service.formData.fpaNombre" class="form-control" [class.is-invalid]="!esValido && service.formData.fpaNombre === ''">
+              <option value="">Seleccionar...</option>
+              <option value="Efectivo">Efectivo</option>
+              <option value="Tarjeta">Tarjeta</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label>Total: </label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">$</div>
+            </div>
+            <input name="facTotal" #facTotal="ngModel" [(ngModel)]="service.formData.facTotal" class="form-control" readonly>
+          </div>
+        </div>
+    </div>
+  </div>
+  <!--Factura detalle-->
+  <table class="table table-dorderless">
+    <thead class="thead-light">
+      <th>Producto</th>
+      <th>Precio</th>
+      <th>Cantidad</th>
+      <th>Total</th>
+      <th>
+        <a class="btn btn-sm btn-success text-white" (click)="AgregaroEditarDetalle(null, service.formData.facId)"> <i class="fa fa-plus"></i> Agregar</a>
+      </th>
+    </thead>
+    <tbody>
+      <tr *ngIf="service.facturaDetalle.length===0" [class.text-danger]="!esValido && service.facturaDetalle.length===0">
+        <td class="font-italic text-center" colspan="5">
+          no hay registros en esta factura
+        </td>
+      </tr>
+      <tr *ngFor="let detalle of service.facturaDetalle; let i=index;">
+        <td>{{detalle.proNombre}}</td>
+        <td>{{detalle.proPrecio}}</td>
+        <td>{{detalle.fdeCantidad}}</td>
+        <td>{{detalle.Total}}</td>
+        <td>
+            <a class="btn btn-sm btn-info text-white" (click)="AgregaroEditarDetalle(i, service.formData.facId)"> <i class="fa fa-pencil"></i> </a>
+            <a class="btn btn-sm btn-danger text-white ml-1" (click)="eliminarDetalle(detalle.fdeId,i)"> <i class="fa fa-trash"></i> </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!---->
+  <div class="form-group">
+    <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Confirmar</button>
+    <a class="btn btn-outline-dark ml-1" routerLink="/facturas"><i class="fa fa-table"></i> Ver Facturas</a>
+  </div>
+</form>
