@@ -9,9 +9,29 @@ import { ErrorHandlerService } from './error-handler.service';
   declarations: [],
   imports: [
     CommonModule
+  ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ApiUrlBaseService,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpTokenService,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorHandlerService,
+      multi: true
+    }
   ]
 })
-export class InterceptorsModule {
+
+export class InterceptorsModule { }
+
+/* export class InterceptorsModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: InterceptorsModule,
@@ -34,4 +54,4 @@ export class InterceptorsModule {
       ]
     };
   }
-}
+} */
