@@ -5,6 +5,12 @@ const Home = {
     icon: 'icon-home'
 };
 
+const Cliente = {
+    text: 'Cliente',
+    link: '/cliente',
+    icon: 'icon-home'
+};
+
 const headingMain = {
     text: 'Main Navigation',
     heading: true
@@ -12,5 +18,6 @@ const headingMain = {
 
 export const menu = [
     headingMain,
-    Home
+    Home,
+    Cliente
 ];
