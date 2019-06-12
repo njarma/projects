@@ -28,7 +28,8 @@
             ],
             "styles": [
               "src/app/core/preloader/preloader.scss",
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [
               "src/app/core/wrapper/wrapper.js",

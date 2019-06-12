@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FacturaService } from 'src/app/core/services/factura.service';
+import { FacturaService } from '@core/services/factura.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { ClienteService } from 'src/app/core/services/cliente.service';
+import { ClienteService } from '@core/services/cliente.service';
 import { Observable } from 'rxjs';
-import { Factura } from 'src/app/shared/models/factura.model';
+import { Factura } from '@shared/models/factura.model';
 
 
 @Component({

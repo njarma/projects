@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FacturaService } from 'src/app/core/services/factura.service';
+import { FacturaService } from '@core/services/factura.service';
 import { NgForm } from '@angular/forms';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { FacturaDetalleComponent } from '../factura-detalle/factura-detalle.component';
-import { ClienteService } from 'src/app/core/services/cliente.service';
-import { Cliente } from 'src/app/shared/models/cliente.model';
+import { FacturaDetalleComponent } from '@modules/facturas/factura-detalle/factura-detalle.component';
+import { ClienteService } from '@core/services/cliente.service';
+import { Cliente } from '@shared/models/cliente.model';
 import { ToastrService } from 'ngx-toastr';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';

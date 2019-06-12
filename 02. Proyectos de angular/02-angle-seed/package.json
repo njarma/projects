@@ -68,6 +68,7 @@
     "ngx-color-picker": "7.0.2",
     "ngx-infinite-scroll": "6.0.1",
     "ngx-select-ex": "3.6.7",
+    "ngx-toastr": "^10.0.4",
     "popper.js": "1.14.3",
     "rxjs": "6.3.3",
     "rxjs-compat": "6.1.0",

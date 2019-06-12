@@ -1,3 +1,9 @@
 export const environment = {
-  production: true
+  production: true,
+  ambientes: {
+    produccion: {
+        apiUrlBase: 'http://localhost:54210/api/'
+    },
+    seleccionado: 'produccion'
+  }
 };

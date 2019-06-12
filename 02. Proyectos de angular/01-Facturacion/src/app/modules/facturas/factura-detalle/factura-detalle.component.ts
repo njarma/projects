@@ -1,10 +1,10 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
-import { FacturaDetalle } from 'src/app/shared/models/factura-detalle.model';
-import { ProductoService } from 'src/app/core/services/producto.service';
-import { Producto } from 'src/app/shared/models/producto.model';
+import { FacturaDetalle } from '@shared/models/factura-detalle.model';
+import { ProductoService } from '@core/services/producto.service';
+import { Producto } from '@shared/models/producto.model';
 import { NgForm } from '@angular/forms';
-import { FacturaService } from 'src/app/core/services/factura.service';
+import { FacturaService } from '@core/services/factura.service';
 import { Observable } from 'rxjs';
 
 @Component({
