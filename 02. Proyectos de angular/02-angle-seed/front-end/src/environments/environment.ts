@@ -14,10 +14,11 @@ export const environment = {
     testing: {
       apiUrlBase: ''
     },
-    mock: {
-      apiUrlBase: 'assets/mocks/'
+    desarrolloMock: {
+      apiUrlBase: 'assets/mocks/',
+      esMock: true
     },
-    seleccionado: 'mock'
+    seleccionado: 'desarrolloMock'
   }
 };
 

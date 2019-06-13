@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
 import { DatatableComponent } from '@swimlane/ngx-datatable';
 import { ClienteService } from '../../../core/services/cliente.service';
+import { take } from 'rxjs/operators';
 
 const _clone = (d) => JSON.parse(JSON.stringify(d));
 
@@ -25,38 +26,21 @@ export class ClientesListaComponent implements OnInit {
   selected = [];
 
   columns = [
-      { prop: 'name', name: 'Nombre' },
-      { prop: 'company', name: 'Empresa' },
-      { prop: 'gender' , name: 'Género' },
-      { prop: 'age', name: 'Edad' }
+      { prop: 'cliNombre', name: 'Nombre' },
+      { prop: 'cliMail', name: 'Correo Electrónico' },
+      { prop: 'cliTelefono' , name: 'Teléfono' },
+      { prop: 'cliEdad', name: 'Edad' }
   ];
   columnsSort = [
-      { prop: 'name', name: 'Nombre' },
-      { prop: 'company', name: 'Empresa' },
-      { prop: 'gender', name: 'Género' },
-      { prop: 'age', name: 'Edad' }
+    { prop: 'cliNombre', name: 'Nombre' },
+    { prop: 'cliMail', name: 'Correo Electrónico' },
+    { prop: 'cliTelefono' , name: 'Teléfono' },
+    { prop: 'cliEdad', name: 'Edad' }
   ];
   @ViewChild(DatatableComponent) table: DatatableComponent;
   @ViewChild('myTable') tableExp: any;
 
-  constructor( public cliente: ClienteService) {
-        this.cliente.buscarTodos().subscribe(res => {
-            console.log(res);
-        });
-
-      this.fetch((data) => {
-          // cache our list
-          this.temp = _clone(data);
-
-          this.rows = _clone(data);;
-          this.rowsFilter = _clone(data);;
-          this.rowsExp = _clone(data);
-          this.rowsSort = _clone(data);
-          this.rowsSel = _clone(data);
-
-      });
-
-  }
+  constructor( public cliente: ClienteService) {}
 
   onPage(event) {
       clearTimeout(this.timeout);
@@ -73,16 +57,6 @@ export class ClientesListaComponent implements OnInit {
       console.log('Detail Toggled', event);
   }
 
-  fetch(cb) {
-      const req = new XMLHttpRequest();
-      req.open('GET', `assets/company.json`);
-
-      req.onload = () => {
-          cb(JSON.parse(req.response));
-      };
-
-      req.send();
-  }
 
   updateValue(event, cell, rowIndex) {
       console.log('inline editing rowIndex', rowIndex)
@@ -93,7 +67,17 @@ export class ClientesListaComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.cliente.buscarTodos()
+    .pipe(take(1))
+    .subscribe(res => {
+        console.log(res);
+        this.temp = res;
+        this.rows = res;
+        this.rowsFilter = res;
+        this.rowsExp = res;
+        this.rowsSort = res;
+        this.rowsSel = res;
+    });
   }
 
   updateFilter(event) {
@@ -102,11 +86,11 @@ export class ClientesListaComponent implements OnInit {
       // filter our data
       const temp = this.temp.filter(function(d) {
           console.log(`${d.gender}`);
-          // return (d.name.toLowerCase().indexOf(val) !== -1 || !val)  ;
-          return (d.name.toLowerCase().includes(val) ||
-                  d.gender.toLowerCase().includes(val) ||
-                  d.company.toLowerCase().includes(val) ||
-                  (d.age + '').toLowerCase().includes(val + '')
+
+          return (d.cliNombre.toLowerCase().includes(val) ||
+                  d.cliMail.toLowerCase().includes(val) ||
+                  d.cliTelefono.toLowerCase().includes(val) ||
+                  (d.cliEdad + '').toLowerCase().includes(val + '')
           )
       });
 

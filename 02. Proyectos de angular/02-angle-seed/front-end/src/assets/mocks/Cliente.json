@@ -24,7 +24,7 @@
       "cliNombre": "Maximiliano Tejero",
       "cliMail": "mtejero@evoltis.com",
       "cliTelefono": "3515457415",
-      "cliEdad": "50"
+      "cliEdad": 50
     },
     {
       "Factura": [
@@ -42,6 +42,24 @@
       "cliNombre": "Juan Prueba",
       "cliMail": "jprueba@evoltis.com",
       "cliTelefono": "3515356545",
-      "cliEdad": "70"
+      "cliEdad": 70
+    },
+    {
+      "Factura": [
+        {
+          "FacturaDetalle": [],
+          "facId": 1014,
+          "facNro": "00073022",
+          "cliId": 2,
+          "fpaNombre": "Efectivo",
+          "facTotal": 55632,
+          "detallesDeleted": null
+        }
+      ],
+      "cliId": 2,
+      "cliNombre": "Nicolás Jarma",
+      "cliMail": "njarma@gmail.com",
+      "cliTelefono": "3875854567",
+      "cliEdad": 29
     }
   ]

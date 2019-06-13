@@ -18,9 +18,7 @@ export class ApiUrlBaseService implements HttpInterceptor {
   }
 
   private JsonExtension() {
-    if (environment.ambientes.seleccionado === 'mock') {
-      return '.json';
-    }
+    return (environment.ambientes[environment.ambientes.seleccionado].esMock) ? '.json' : '';
   }
 
 }

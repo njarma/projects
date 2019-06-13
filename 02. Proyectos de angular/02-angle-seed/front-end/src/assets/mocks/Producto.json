@@ -1,0 +1,20 @@
+[
+    {
+      "FacturaDetalle": [],
+      "proId": 1,
+      "proNombre": "Coca Cola",
+      "proPrecio": 65
+    },
+    {
+      "FacturaDetalle": [],
+      "proId": 2,
+      "proNombre": "Fanta",
+      "proPrecio": 60
+    },
+    {
+      "FacturaDetalle": [],
+      "proId": 3,
+      "proNombre": "Manaos",
+      "proPrecio": 35
+    }
+  ]

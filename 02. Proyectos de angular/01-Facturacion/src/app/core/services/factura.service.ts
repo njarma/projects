@@ -24,7 +24,7 @@ export class FacturaService extends ApiService<Factura> {
   gestionFacturas() {
     var body = {
       ...this.formData,
-      FacturaDetalles: this.facturaDetalle
+      FacturaDetalle: this.facturaDetalle
     };
     return this.guardar( body );
   }
