@@ -2,9 +2,9 @@
 @import '~@swimlane/ngx-datatable/release/themes/bootstrap.css';
 @import '~@swimlane/ngx-datatable/release/assets/icons.css';
 
-@import '../../../shared/styles/bootstrap/_functions';
-@import '../../../shared/styles/bootstrap/_variables';
-@import '../../../shared/styles/app/variables';
+@import '~app/shared/styles/bootstrap/_functions';
+@import '~app/shared/styles/bootstrap/_variables';
+@import '~app/shared/styles/app/variables';
 
 .ngx-datatable.bootstrap {
     background-color: transparent;

@@ -1,7 +1,7 @@
-@import "../../../shared/styles/bootstrap/_functions.scss";
-@import "../../../shared/styles/bootstrap/_variables.scss";
-@import "../../../shared/styles/bootstrap/_mixins";
-@import '../../../shared/styles/app/variables.scss';
+@import "~app/shared/styles/bootstrap/_functions.scss";
+@import "~app/shared/styles/bootstrap/_variables.scss";
+@import "~app/shared/styles/bootstrap/_mixins";
+@import '~app/shared/styles/app/variables.scss';
 
 .home-container {
     margin: 0 auto;

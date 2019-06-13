@@ -24,14 +24,16 @@ export class ClienteComponent implements OnInit {
   selected = [];
 
   columns = [
-      { prop: 'name' },
-      { name: 'Company' },
-      { name: 'Gender' }
+      { prop: 'name', name: 'Nombre' },
+      { prop: 'company', name: 'Empresa' },
+      { prop: 'gender' , name: 'Género' },
+      { prop: 'age', name: 'Edad' }
   ];
   columnsSort = [
-      { prop: 'name' },
-      { name: 'Company' },
-      { name: 'Gender' }
+      { prop: 'name', name: 'Nombre' },
+      { prop: 'company', name: 'Empresa' },
+      { prop: 'gender', name: 'Género' },
+      { prop: 'age', name: 'Edad' }
   ];
   @ViewChild(DatatableComponent) table: DatatableComponent;
   @ViewChild('myTable') tableExp: any;
@@ -95,7 +97,13 @@ export class ClienteComponent implements OnInit {
 
       // filter our data
       const temp = this.temp.filter(function(d) {
-          return d.name.toLowerCase().indexOf(val) !== -1 || !val;
+          console.log(`${d.gender}`);
+          // return (d.name.toLowerCase().indexOf(val) !== -1 || !val)  ;
+          return (d.name.toLowerCase().includes(val) ||
+                  d.gender.toLowerCase().includes(val) ||
+                  d.company.toLowerCase().includes(val) ||
+                  (d.age + '').toLowerCase().includes(val + '')
+          )
       });
 
       // update the rows
