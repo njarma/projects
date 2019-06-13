@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ClienteComponent } from './cliente/cliente.component';
+import { ClientesListaComponent } from './clientes-lista/clientes-lista.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { ClienteRoutingModule } from './cliente.router.module';
 
 @NgModule({
-  declarations: [ClienteComponent],
+  declarations: [ClientesListaComponent],
   imports: [
     CommonModule,
     NgxDatatableModule,

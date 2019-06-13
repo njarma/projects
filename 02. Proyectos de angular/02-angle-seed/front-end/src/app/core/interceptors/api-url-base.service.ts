@@ -9,13 +9,18 @@ import { environment } from '@environments/environment';
 export class ApiUrlBaseService implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const request = req.clone({ url: `${this.GetResourceUrl()}${req.url}` });
+    const request = req.clone({ url: `${this.GetResourceUrl()}${req.url}${this.JsonExtension()}` });
     return next.handle(request);
   }
 
   private GetResourceUrl() {
-    console.log(environment.ambientes[environment.ambientes.seleccionado].apiUrlBase);
     return environment.ambientes[environment.ambientes.seleccionado].apiUrlBase;
+  }
+
+  private JsonExtension() {
+    if (environment.ambientes.seleccionado === 'mock') {
+      return '.json';
+    }
   }
 
 }

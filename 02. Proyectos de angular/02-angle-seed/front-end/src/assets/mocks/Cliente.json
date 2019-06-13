@@ -1,0 +1,47 @@
+[
+    {
+      "Factura": [
+        {
+          "FacturaDetalle": [],
+          "facId": 1014,
+          "facNro": "00020212",
+          "cliId": 1,
+          "fpaNombre": "Efectivo",
+          "facTotal": 780,
+          "detallesDeleted": null
+        },
+        {
+          "FacturaDetalle": [],
+          "facId": 1016,
+          "facNro": "00058958",
+          "cliId": 1,
+          "fpaNombre": "Tarjeta",
+          "facTotal": 26640,
+          "detallesDeleted": null
+        }
+      ],
+      "cliId": 1,
+      "cliNombre": "Maximiliano Tejero",
+      "cliMail": "mtejero@evoltis.com",
+      "cliTelefono": "3515457415",
+      "cliEdad": "50"
+    },
+    {
+      "Factura": [
+        {
+          "FacturaDetalle": [],
+          "facId": 1015,
+          "facNro": "00073029",
+          "cliId": 2,
+          "fpaNombre": "Efectivo",
+          "facTotal": 5565,
+          "detallesDeleted": null
+        }
+      ],
+      "cliId": 2,
+      "cliNombre": "Juan Prueba",
+      "cliMail": "jprueba@evoltis.com",
+      "cliTelefono": "3515356545",
+      "cliEdad": "70"
+    }
+  ]

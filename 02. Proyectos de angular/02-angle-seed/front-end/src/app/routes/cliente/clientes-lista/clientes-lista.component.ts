@@ -1,15 +1,16 @@
 import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
 import { DatatableComponent } from '@swimlane/ngx-datatable';
+import { ClienteService } from '../../../core/services/cliente.service';
 
 const _clone = (d) => JSON.parse(JSON.stringify(d));
 
 @Component({
   selector: 'app-cliente',
-  templateUrl: './cliente.component.html',
-  styleUrls: ['./cliente.component.scss'],
+  templateUrl: './clientes-lista.component.html',
+  styleUrls: ['./clientes-lista.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class ClienteComponent implements OnInit {
+export class ClientesListaComponent implements OnInit {
 
   editing = {};
   rows = [];
@@ -38,7 +39,10 @@ export class ClienteComponent implements OnInit {
   @ViewChild(DatatableComponent) table: DatatableComponent;
   @ViewChild('myTable') tableExp: any;
 
-  constructor() {
+  constructor( public cliente: ClienteService) {
+        this.cliente.buscarTodos().subscribe(res => {
+            console.log(res);
+        });
 
       this.fetch((data) => {
           // cache our list

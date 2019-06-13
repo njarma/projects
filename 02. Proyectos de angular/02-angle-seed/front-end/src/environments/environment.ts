@@ -14,7 +14,10 @@ export const environment = {
     testing: {
       apiUrlBase: ''
     },
-    seleccionado: 'desarrollo'
+    mock: {
+      apiUrlBase: 'assets/mocks/'
+    },
+    seleccionado: 'mock'
   }
 };
 
