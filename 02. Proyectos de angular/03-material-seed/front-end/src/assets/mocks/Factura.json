@@ -1,0 +1,18 @@
+[
+  {
+    "facId": 1018,
+    "facNro": "00050678",
+    "Cliente": "Maximiliano Tejero",
+    "fpaNombre": "Efectivo",
+    "facTotal": 1365,
+    "detallesDeleted": ""
+  },
+  {
+    "facId": 1019,
+    "facNro": "00095214",
+    "Cliente": "Juan Prueba",
+    "fpaNombre": "Tarjeta",
+    "facTotal": 42065,
+    "detallesDeleted": ""
+  }
+]
