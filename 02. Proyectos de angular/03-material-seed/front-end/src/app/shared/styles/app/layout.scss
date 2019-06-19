@@ -30,6 +30,7 @@ $navbar-hg:                               $navbar-height;
 $boxed-max-width:                         1140px;
 $z-index-main-section:                    111;
 
+
 html {
     /* $replace rtl */
     direction: ltr;
@@ -71,7 +72,10 @@ body {
         background-color: $aside-bg;
 
         .aside-inner {
-            padding-top: $navbar-hg;
+        /*  Cambios header
+            padding-top: $navbar-hg;*/
+
+            padding-top: 0px;
             height: 100%;
             width: $aside-wd;
             overflow: hidden;
@@ -456,9 +460,15 @@ body {
     .wrapper {
         .topnavbar-wrapper {
             position: fixed;
+            /*  Cambios header
             top: 0;
+            */
+            right: 0;
             width: 100%;
+            /*  Cambios header
             z-index: $z-index-main-section + 10;
+            */
+            z-index: $z-index-main-section + 2;
         }
         .aside-container,
         .offsidebar {

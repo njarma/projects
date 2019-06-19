@@ -32,25 +32,25 @@ export class HeaderComponent implements OnInit {
         if (ua.indexOf("MSIE ") > 0 || !!ua.match(/Trident.*rv\:11\./)) { // Not supported under IE
             this.fsbutton.nativeElement.style.display = 'none';
         }
-
+        /*
         // Switch fullscreen icon indicator
         const el = this.fsbutton.nativeElement.firstElementChild;
         screenfull.on('change', () => {
             if (el)
                 el.className = screenfull.isFullscreen ? 'fa fa-compress' : 'fa fa-expand';
-        });
+        }); */
     }
 
     toggleUserBlock(event) {
         event.preventDefault();
         this.userblockService.toggleVisibility();
     }
-
+    /*
     openNavSearch(event) {
         event.preventDefault();
         event.stopPropagation();
         this.setNavSearchVisible(true);
-    }
+    }*/
 
     setNavSearchVisible(stat: boolean) {
         // console.log(stat);
@@ -73,9 +73,9 @@ export class HeaderComponent implements OnInit {
         return this.settings.getLayoutSetting('isCollapsedText');
     }
 
-    toggleFullScreen(event) {
+    /* toggleFullScreen(event) {
         if (screenfull.enabled) {
             screenfull.toggle();
         }
-    }
+    } */
 }
