@@ -116,6 +116,7 @@ $nav-top-item-desktop-active:   $nav-top-item-mobile-active;
     .navbar-nav>.nav-item>.nav-link {
         padding: 1.1rem .95rem;
         font-size: .85rem;
+        cursor: pointer;
 
         .perfil {
             @include clearfix;
