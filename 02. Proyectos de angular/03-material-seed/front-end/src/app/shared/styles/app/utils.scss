@@ -1,3 +1,5 @@
+@import '../app/variables.scss';
+
 /* ========================================================================
          Component: utils
  ========================================================================== */
@@ -126,6 +128,11 @@
 .bg-cover {
     background-size: cover;
 }
+
+// CRISALIS BGs
+.bg-cri-primario   { @include make-bg($cri-primario); }
+
+
 
 // Common thumbnail sizes (ideal for images)
 

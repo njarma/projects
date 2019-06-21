@@ -8,12 +8,13 @@ const themeE = require('../../shared/styles/themes/theme-e.scss');
 const themeF = require('../../shared/styles/themes/theme-f.scss');
 const themeG = require('../../shared/styles/themes/theme-g.scss');
 const themeH = require('../../shared/styles/themes/theme-h.scss');
+const themeCRI = require('../../shared/styles/themes/theme-crisalis.scss');
 
 @Injectable()
 export class ThemesService {
 
     styleTag: any;
-    defaultTheme: string = 'A';
+    defaultTheme: string = 'CRI';
 
     constructor() {
         this.createStyle();
@@ -51,8 +52,11 @@ export class ThemesService {
             case 'G':
                 this.injectStylesheet(themeG);
                 break;
-            case 'H':
-                this.injectStylesheet(themeH);
+            // case 'H':
+            //     this.injectStylesheet(themeH);
+            //     break;
+            case 'CRI':
+                this.injectStylesheet(themeCRI);
                 break;
         }
     }
