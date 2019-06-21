@@ -1,52 +1,53 @@
 /* ========================================================================
      Component: typo
  ========================================================================== */
+ @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700&display=swap&subset=latin-ext');
 
 /* Roboto @font-face */
 
-@font-face {
-    font-family: 'Roboto';
-    src: url('~roboto-fontface/fonts/roboto/Roboto-Light.woff2') format('woff2'),
-         url('~roboto-fontface/fonts/roboto/Roboto-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'Roboto';
+//     src: url('~roboto-fontface/fonts/roboto/Roboto-Light.woff2') format('woff2'),
+//          url('~roboto-fontface/fonts/roboto/Roboto-Light.woff') format('woff');
+//     font-weight: 300;
+//     font-style: normal;
+// }
 
-@font-face {
-    font-family: 'Roboto';
-    src: url('~roboto-fontface/fonts/roboto/Roboto-LightItalic.woff2') format('woff2'),
-         url('~roboto-fontface/fonts/roboto/Roboto-LightItalic.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-}
+// @font-face {
+//     font-family: 'Roboto';
+//     src: url('~roboto-fontface/fonts/roboto/Roboto-LightItalic.woff2') format('woff2'),
+//          url('~roboto-fontface/fonts/roboto/Roboto-LightItalic.woff') format('woff');
+//     font-weight: 300;
+//     font-style: italic;
+// }
 
-@font-face {
-    font-family: 'Roboto';
-    src: url('~roboto-fontface/fonts/roboto/Roboto-Regular.woff2') format('woff2'),
-         url('~roboto-fontface/fonts/roboto/Roboto-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'Roboto';
+//     src: url('~roboto-fontface/fonts/roboto/Roboto-Regular.woff2') format('woff2'),
+//          url('~roboto-fontface/fonts/roboto/Roboto-Regular.woff') format('woff');
+//     font-weight: 400;
+//     font-style: normal;
+// }
 
-@font-face {
-    font-family: 'Roboto';
-    src: url('~roboto-fontface/fonts/roboto/Roboto-RegularItalic.woff2') format('woff2'),
-         url('~roboto-fontface/fonts/roboto/Roboto-RegularItalic.woff') format('woff');
-    font-weight: 400;
-    font-style: italic;
-}
+// @font-face {
+//     font-family: 'Roboto';
+//     src: url('~roboto-fontface/fonts/roboto/Roboto-RegularItalic.woff2') format('woff2'),
+//          url('~roboto-fontface/fonts/roboto/Roboto-RegularItalic.woff') format('woff');
+//     font-weight: 400;
+//     font-style: italic;
+// }
 
-@font-face {
-    font-family: 'Roboto';
-    src: url('~roboto-fontface/fonts/roboto/Roboto-Bold.woff2') format('woff2'),
-         url('~roboto-fontface/fonts/roboto/Roboto-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'Roboto';
+//     src: url('~roboto-fontface/fonts/roboto/Roboto-Bold.woff2') format('woff2'),
+//          url('~roboto-fontface/fonts/roboto/Roboto-Bold.woff') format('woff');
+//     font-weight: 700;
+//     font-style: normal;
+// }
 
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Raleway", sans-serif;
     color: $body-color;
     font-size: 0.875rem; // 14px
 }
