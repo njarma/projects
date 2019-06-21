@@ -63,8 +63,8 @@ $scrollbar-wd:                    17px;
 
     >li {
         display: block;
-        border-left: $sidebar-item-border-wd solid transparent;
-        @include transition(border-left-color 0.4s ease);
+        border-right: $sidebar-item-border-wd solid transparent;
+        @include transition(border-right-color 0.4s ease);
 
         >a,
         >.nav-item {
@@ -107,7 +107,7 @@ $scrollbar-wd:                    17px;
         }
 
         &.active {
-            border-left-color: $sidebar-item-color-active;
+            border-right-color: $sidebar-item-color-active;
         }
     }
     .badge {
@@ -136,7 +136,7 @@ $tablet-landscape: 1025px;
     }
 
     >li {
-        border-left: 0 !important;
+        border-right: 0 !important;
         >a,
         >.nav-item {
             display: block;

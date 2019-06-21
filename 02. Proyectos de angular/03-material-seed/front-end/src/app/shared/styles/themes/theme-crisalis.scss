@@ -130,7 +130,8 @@ body, .wrapper .section-container {
         }
 
         &.active {
-            border-left-color: $sidebar-item-color-active;
+            border-right-color: $sidebar-item-color-active;
+
         }
 
     }
