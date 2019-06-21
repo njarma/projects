@@ -25,12 +25,12 @@ $nav-top-item-active:           darken($nav-top-bg, 20%); // Cuando haces Hover
 
 $sidebar-bg:                      $aside-bg; // background Sidebar, igual que aside ...
 
-$sidebar-item-color:              #515253; // Items no seleccionados Sidebar
-$sidebar-item-color-active:       $nav-top-bg; // Color de item Seleccionado
+$sidebar-item-color:              $cri-gris-cla; // Items no seleccionados Sidebar
+$sidebar-item-color-active:       $cri-secundario; // Color de item Seleccionado
 $sidebar-item-bg-active:          darken($sidebar-bg, 1%); // Color de fondo de item seleccionado
 
-$sidebar-icon-color:              inherits; // color de iconos
-$sidebar-icon-color-active:       $nav-top-bg; // color de iconos seleccionados
+$sidebar-icon-color:              $cri-gris-cla; // color de iconos
+$sidebar-icon-color-active:       $cri-secundario; // color de iconos seleccionados
 
 $sidebar-bullet-color:            rgba(0,0,0,.25); // Color de bullets
 $sidebar-bullet-color-active:     $sidebar-icon-color-active; // Bullets activados
