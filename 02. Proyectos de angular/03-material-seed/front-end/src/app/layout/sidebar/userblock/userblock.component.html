@@ -1,8 +1,8 @@
-<div class="item user-block" *ngIf="userBlockIsVisible()">
+<div class="item user-block p-contenedor" *ngIf="userBlockIsVisible()">
 
     <!-- Logo de la empresa -->
     <div class="img-logo">
-        <img src="assets/crisalis/img/logo-no-tagline.png" class="img-fluid text-justify"> 
+        <img src="assets/crisalis/img/logo-no-tagline.png" class="img-fluid text-justify">
     </div>
 
     <!-- User picture-->
@@ -11,18 +11,27 @@
             <img class="img-tn-borde rounded-circle" [src]="user.picture" alt="Avatar" />
         </div>
     </div>
+    <div>
+        <hr>
+    </div>
     <!-- Name and Job-->
     <div class="user-block-info">
         <span class="user-block-name t-lg-gris">¡Hola!</span>
         <span class="color-texto-user t-lg-pri">Maximiliano Guercio</span>
-        <span class="user-block-role t-lg-gris"><i class="fa fa-certificate"></i> Gestor de Innovacion</span>
+        <span class="user-block-role t-lg-gris"><i class="fa fa-certificate"></i> Gestor de Innovación</span>
     </div>
-    <div class="user-block-info" style="margin-top: 20px">
-        <span class="user-block-name t-sm-pri">EMAIL</span>
-        <span class="user-block-name">mguercio@empresa.com</span>
-        <span class="user-block-name t-sm-pri">DEPARTAMENTO</span>
-        <span class="user-block-name">Empresa S.A</span>
-        <span class="user-block-role t-sm-pri">SUPERVISOR</span>
-        <span class="user-block-name">Juana Pérez</span>
+    <div class="user-block-info">
+        <div class="div-margen">
+            <span class="user-block-name t-sm-pri">EMAIL</span>
+            <span class="user-block-name">mguercio@empresa.com</span>
+        </div>
+        <div class="div-margen">
+            <span class="user-block-name t-sm-pri">DEPARTAMENTO</span>
+            <span class="user-block-name">Empresa S.A</span>
+        </div>
+        <div class="div-margen">
+            <span class="user-block-role t-sm-pri">SUPERVISOR</span>
+            <span class="user-block-name">Juana Pérez</span>
+        </div>
     </div>
 </div>
