@@ -20,11 +20,11 @@
 
     function startCounter() {
         var remaining = 100 - counter;
-        counter = counter + (0.015 * Math.pow(1 - Math.sqrt(remaining), 2));
+        counter = counter + (0.055 * Math.pow(1 - Math.sqrt(remaining), 2));
 
         if (progressBar) progressBar.style.width = Math.round(counter) + '%';
 
-        timeout = setTimeout(startCounter, 20);
+        timeout = setTimeout(startCounter, 22);
     }
 
     function endCounter() {
