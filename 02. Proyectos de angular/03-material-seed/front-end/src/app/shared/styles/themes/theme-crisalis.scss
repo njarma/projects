@@ -13,13 +13,13 @@ $aside-bg:                      #fff; // Fondo Sidebar
 
 // NAVBAR TOP
 
-$nav-top-bg:                    $cri-primario; // Fondo del NAVBAR
-$nav-top-bg-start:              $nav-top-bg; // Para hacer Gradiente
-$nav-top-bg-end:                $nav-top-bg; // Para hacer Gradiente
+$nav-top-bg:                    #fff; // Fondo del NAVBAR
+$nav-top-bg-start:              #fff; // Para hacer Gradiente
+$nav-top-bg-end:                #fff; // Para hacer Gradiente
 $nav-header-bg:                 transparent;
 
-$nav-top-item:                  #fff; // Color Items NAVBAR
-$nav-top-item-active:           darken($nav-top-bg, 20%); // Cuando haces Hover
+$nav-top-item:                  $cri-primario; // Color Items NAVBAR
+$nav-top-item-active:           darken($cri-primario, 20%); // Cuando haces Hover
 
 // SIDEBAR
 

@@ -1,0 +1,10 @@
+@import '../../bootstrap/images';
+
+.img-tn-borde {
+    @extend .img-thumbnail;
+    border: 2px solid $cri-primario;
+}
+
+.borde-bottom {
+    border-bottom: 3px solid $cri-primario;
+}
