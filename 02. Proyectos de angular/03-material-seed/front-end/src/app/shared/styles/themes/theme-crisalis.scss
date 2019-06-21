@@ -14,8 +14,8 @@ $aside-bg:                      #fff; // Fondo Sidebar
 // NAVBAR TOP
 
 $nav-top-bg:                    $cri-primario; // Fondo del NAVBAR
-$nav-top-bg-start:              $nav-top-bg; // Para hacer Gradiente
-$nav-top-bg-end:                $nav-top-bg; // Para hacer Gradiente
+$nav-top-bg-start:              $cri-primario; // Para hacer Gradiente
+$nav-top-bg-end:                $cri-primario; // Para hacer Gradiente
 $nav-header-bg:                 transparent;
 
 $nav-top-item:                  #fff; // Color Items NAVBAR
