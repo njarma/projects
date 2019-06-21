@@ -1,0 +1,37 @@
+@import '../../../shared/styles/bootstrap.scss';
+
+
+@mixin color-text($color, $size, $weight) {
+    color: $color !important;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+
+.t-lg-pri {
+    @include color-text( $cri-primario, 20px, bold);
+}
+
+.t-lg-gris {
+    @include color-text( $cri-gris-osc, 20px, inherit);
+}
+
+.t-sm-pri {
+    @include color-text($cri-primario, 12px, bold);
+}
+
+.img-tn-borde {
+    @extend .img-thumbnail;
+    border: 2px solid $cri-primario;
+}
+
+.img-logo {
+    text-align: center!important;
+    background: #FFFFFF;
+    margin-bottom: 45px;
+    margin-top: -15px;
+
+    img {
+    width: 120px;
+    }
+}
