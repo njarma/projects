@@ -71,7 +71,7 @@
     "ngx-color-picker": "7.0.2",
     "ngx-infinite-scroll": "6.0.1",
     "ngx-select-ex": "3.6.7",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "popper.js": "1.14.3",
     "roboto-fontface": "0.10.0",
     "rxjs": "6.3.3",
